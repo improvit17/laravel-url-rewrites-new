@@ -1,5 +1,5 @@
 {
-  "name": "ruthgeridema/laravel-url-rewrites",
+  "name": "improvit/laravel-url-rewrites",
   "description": "Easy URL rewrites in your Laravel application",
   "keywords": [
     "url",
@@ -16,7 +16,7 @@
     }
   ],
   "require": {
-    "php": "^7.2",
+    "php": "^8.1",
     "laravel/framework": "*"
   },
   "require-dev": {
