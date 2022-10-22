@@ -33,11 +33,13 @@ class UrlRewriteController
         return redirect($urlRewrite->target_path, $urlRewrite->getRedirectType());
     }
 
-    protected function forwardResponse($url): Response
+    protected function forwardResponse($url)
     {
+        $url = tenant()->route('cats.index') . '/'.ltrim($url, '/');
+
         return Route::dispatch(
             Request::create(
-                '/'.ltrim($url, '/'),
+                $url,
                 request()->getMethod()
             )
         );

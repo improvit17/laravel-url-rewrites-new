@@ -53,7 +53,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $router = $this->app['router'];
         $router->macro('rewrites', function () use ($router, $queryParam) {
-            $router->get('{url}', '\\'.UrlRewriteController::class)->where('url', $queryParam)->name('url.rewrite');
+            $router->domain('{tenantDomain}')->get('{url}', '\\'.UrlRewriteController::class)->where(['tenantDomain' => env('DOMAIN_FILTER')])->where('url', $queryParam)->name('url.rewrite');
         });
     }
 
