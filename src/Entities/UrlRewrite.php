@@ -25,6 +25,8 @@ class UrlRewrite extends Model
         'target_path',
         'redirect_type',
         'description',
+        'model',
+        'model_id',
     ];
 
     /** @var array */
