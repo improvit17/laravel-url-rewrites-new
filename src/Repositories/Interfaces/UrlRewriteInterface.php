@@ -26,6 +26,8 @@ interface UrlRewriteInterface
         string $requestPath,
         ?string $targetPath,
         ?string $type = null,
+        ?string $model = null,
+        ?string $model_id = null,
         ?array $typeAttributes = null,
         int $redirectType = 0,
         ?string $description = null,

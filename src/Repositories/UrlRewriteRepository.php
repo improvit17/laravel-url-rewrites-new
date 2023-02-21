@@ -119,6 +119,8 @@ class UrlRewriteRepository implements UrlRewriteInterface
         string $requestPath,
         ?string $targetPath,
         ?string $type = null,
+        ?string $model = null,
+        ?string $model_id = null,
         ?array $typeAttributes = null,
         int $redirectType = 0,
         ?string $description = null,
@@ -141,6 +143,8 @@ class UrlRewriteRepository implements UrlRewriteInterface
                 'target_path' => $targetPath,
                 'redirect_type' => $redirectType,
                 'description' => $description,
+                'model' => $model,
+                'model_id' => $model_id,
             ]
         );
     }
