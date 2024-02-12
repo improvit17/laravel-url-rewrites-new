@@ -35,7 +35,7 @@ class UrlRewriteController
 
     protected function forwardResponse($url)
     {
-        $url = tenant()->route('cats.index') . '/'.ltrim($url, '/');
+        $url = tenant()->route('index') . '/'.ltrim($url, '/');
 
         return Route::dispatch(
             Request::create(
